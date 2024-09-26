@@ -93,6 +93,16 @@ def game_loop():
             koala_pos[1] -= koala_speed
         if keys[pygame.K_s] and koala_pos[1] < HEIGHT - 40:
             koala_pos[1] += koala_speed
+        
+        keys = pygame.key.get_pressed()
+        if keys[pygame.K_LEFT] and koala_pos[0] > 0:
+            koala_pos[0] -= koala_speed
+        if keys[pygame.K_RIGHT] and koala_pos[0] < WIDTH - 40:
+            koala_pos[0] += koala_speed
+        if keys[pygame.K_UP] and koala_pos[1] > 0:
+            koala_pos[1] -= koala_speed
+        if keys[pygame.K_DOWN] and koala_pos[1] < HEIGHT - 40:
+            koala_pos[1] += koala_speed
 
         # Движение клубники
         for strawberry in strawberries:
